@@ -1,0 +1,250 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Variáveis CSS para facilitar a manutenção das cores */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #6c757d; /* Cinza para textos secundários */
+    --dark-bg: #212529; /* Fundo escuro principal */
+    --light-bg: #f8f9fa; /* Fundo claro para seções */
+    --text-dark: #343a40; /* Texto escuro */
+    --text-light: #ffffff; /* Texto claro */
+    --border-color: #dee2e6; /* Cor de borda */
+    --card-bg: #ffffff; /* Fundo do card */
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header - Hero Section */
+.hero {
+    background: var(--primary-color); /* Fundo azul */
+    color: var(--text-light);
+    text-align: center;
+    padding: 80px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    color: var(--text-light);
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    opacity: 0.9;
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding-bottom: 60px;
+}
+
+.section-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Grid de Benefícios */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.benefit-item {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.benefit-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 0.95em;
+    color: var(--secondary-color);
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    padding: 40px;
+    background-color: #e9ecef; /* Um cinza claro para CTA */
+    border-radius: 8px;
+    border: 1px dashed var(--secondary-color);
+}
+
+.call-to-action h2 {
+    color: var(--text-dark);
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    transition: 1s;
+    background-color: #8cc4ff;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+    .hero h1 {
+        font-size: 2.8em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .section-card {
+        padding: 20px;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .benefit-item {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
